@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - Nexus Host</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Control Panel</h2>
+        <div id="login-section">
+            <input type="password" id="admin-pass" placeholder="Enter Admin Password">
+            <button onclick="loginAdmin()">Access Panel</button>
+        </div>
+        <div id="file-list-section" style="display:none;">
+            <h3>Hosted Files Data</h3>
+            <table id="files-table">
+                <thead>
+                    <tr><th>File Name</th><th>Type</th><th>Telegram Link</th></tr>
+                </thead>
+                <tbody id="files-body"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
