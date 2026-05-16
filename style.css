@@ -1,0 +1,7 @@
+body { background: #0b0c10; color: #66fcf1; font-family: sans-serif; text-align: center; }
+.container { margin-top: 50px; padding: 20px; background: #1f2833; display: inline-block; border-radius: 10px; }
+input, button { padding: 10px; margin: 10px; border-radius: 5px; border: none; }
+button { background: #45a29e; color: white; cursor: pointer; font-weight: bold; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { border: 1px solid #45a29e; padding: 10px; }
+        
