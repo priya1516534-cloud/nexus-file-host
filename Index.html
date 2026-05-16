@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nexus File Host</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Hosting</h1>
+        <p>Support: .py, .zip, .mp4, .jpg</p>
+        <input type="file" id="user-file">
+        <button onclick="uploadFile()">Upload Now</button>
+        <p id="status"></p>
+    </div>
+    <script>
+        function uploadFile() {
+            const file = document.getElementById('user-file').files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+            document.getElementById('status').innerText = "Uploading...";
+            fetch('/api/upload', {method: 'POST', body: formData})
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('status').innerText = data.success ? "Success: " + data.link : "Failed!";
+            });
+        }
+    </script>
+</body>
+</html>
